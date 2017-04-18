@@ -1,9 +1,9 @@
 {
-  "name": "vardansawhney.github.io",
+  "name": "sawhneyvardan.github.io",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/nvanexan/nvanexan.github.io.git",
-  "author": "Vardan Sawhney <nick.vanexan@gmail.com>",
+  "author": "Vardan Sawhney <vardansawhney@gmail.com>",
   "license": "MIT",
   "scripts": {
     "styles": "gulp css",
