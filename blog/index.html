@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blog
+description: Highschool student trying to demonstrate iniative by trying out new things.
+
+<div class="blog-landing-container" >
+  <div class="blog-landing-title">
+    <h1>{{ page.title }}</h1>
+  </div>
+  <div class="blog-landing-posts">
+    <p class="intro">
+      Some thoughts on math, innovations and general takes on life.
+    </p>
+    <hr/>
+    {% for post in site.posts %}
+    <div class='card'>
+      <div class='card-icon {{ post.category }}'>
+        {% if post.category == 'Opinion' %}
+        <i class="material-icons">vpn_key</i>
+        {% elsif post.category == 'mathematics' %}
+        <i class="material-icons">gavel</i>
+        {% elsif post.category == 'Innovations' %}
+        <i class="material-icons">security</i>
+        {% endif %}
+      </div>
+      <div class='card-content'>
+        <h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h3>
+        <span class="date">{{ post.date | date_to_string }}</span>
+      </div>
+    </div>
+    {% else %}
+    <p>No posts yet. Check back soon!</p>
+    {% endfor %}
+  </div>
+</div>

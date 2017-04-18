@@ -1,0 +1,18 @@
+name: Vardan Sawhney
+markdown: kramdown
+description: Highschool student trying to demonstrate iniative by trying out new things.
+
+collections:
+  my_categories:
+    output: true
+    permalink: /blog/category/:name/
+  my_tags:
+    output: true
+    permalink: /blog/tag/:name/
+
+gems:
+  - jekyll-paginate
+
+permalink: /blog/post/:year/:month/:day/:title/
+paginate: 5
+paginate_path: '/blog/page/:num/'

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="blog-landing-container" >
+  <div class="blog-landing-title">
+    <h1>{{ page.title }}</h1>
+  </div>
+  <div class="blog-landing-posts">
+    <div class='post-header'>
+      <span class='category-icon {{ page.category }}'>
+        {% if post.category == 'Opinion' %}
+        <i class="material-icons">vpn_key</i>
+        {% elsif post.category == 'mathematics' %}
+        <i class="material-icons">gavel</i>
+        {% elsif post.category == 'Innovations' %}
+        <i class="material-icons">security</i>
+        {% endif %}
+      </span>
+      <p class="meta">{{ page.date | date_to_string }} {% if page.category %}&nbsp;&nbsp;/&nbsp;&nbsp; Filed under: {{ page.category }} {% endif %}</p>
+      <p class="intro">{{ page.excerpt }}</p>
+    </div>
+    <p>
+    <div class="post-content">
+      {{ content }}
+    </div>
+    </p>
+    <div class='post-footer'>
+      <p>
+        <i>This site was only created to represent the creative portion of an application as a leadership developer at my school's leadership conference event.This does not accurately reflect the full extent of my developing experience or knowledge.</i>
+      </p>
+      <p style="margin-top: 1rem;">
+        <a href="/blog" class='animated-line'>More Articles by Vardan</a>
+      </p>
+    </div>
+  </div>
+</div>

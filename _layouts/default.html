@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <title>{{ page.title }} | Vardan Sawhney - Student Leader - Toronto</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@vardansawhney">
+  <meta name="twitter:title" content="{{ page.title }} via @vardansawhney">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="twitter:creator" content="@vardansawhney">
+  <meta name="twitter:image" content="http://nicholasvanexan.com/public/og-logo.png">
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{ page.title }} | Vardan Sawhney" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://nicholasvanexan.com" />
+  <meta property="og:image" content="http://nicholasvanexan.com/public/og-logo.png" />
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="/css/blog.css">
+  <link rel="icon" href="/public/favicon.ico">
+</head>
+<body>
+  <div class='wrapper'>
+    <div class='main-content'>
+      <div class='header-container'>
+        <header class='header-component'>
+          <h1 class='header-component__name'><a href='/'>Vardan Sawhney</a></h1>
+          <h2 class='header-component__title'>Student &amp; LD</h2>
+        </header>
+        <nav class='global-nav' id="nav">
+          <h3>Menu</h3>
+          <div class='close-button' onclick="toggleMenu()">
+            <i class="material-icons">close</i>
+          </div>
+          <div class='nav-collection'>
+            <div class='nav-item'>
+              <a href="/about" class='animated-line'>About</a>
+            </div>
+            <div class='nav-item'>
+              <a href="/about#legal" class='animated-line'>Volunteer/Work Experience</a>
+            </div>
+            <div class='nav-item'>
+              <a href="/about#tech" class='animated-line'>Tech Experience</a>
+            </div>
+          </div>
+          <div class='nav-collection'>
+            <div class='nav-item'>
+              <a href="/services" class='animated-line'>Services</a>
+            </div>
+            <div class='nav-item'>
+              <a href="/contact" class='animated-line'>Contact</a>
+            </div>
+            <div class='nav-item'>
+              <a href="/blog" class='animated-line'>Blog</a>
+            </div>
+          </div>
+        </nav>
+        <div class='mobile-nav-button-container'>
+          <div class='mobile-nav-button' onclick="toggleMenu()">
+            <i class="material-icons">menu</i>
+          </div>
+        </div>
+      </div>
+      <div class='content-container'>
+        {{ content }}
+      </div>
+      <section class='section-item contact-component'>
+        <div class='section-content'>
+          <ul class='contact-component__list'>
+            <li class='contact-component__list-item'>
+              <span class='label'>Email:</span>
+              <span class='value'><a href='mailto:vardansawhney@gmail.com'>vardansawhney@gmail.com</a></span>
+            </li>
+            <li class='contact-component__list-item'>
+              <span class='label'>Twitter:</span>
+              <span class='value'><a href='https://twitter.com/vardansawhney' target='_blank'>@vardansawhney</a></span>
+            </li>
+            <li class='contact-component__list-item'>
+              <span class='label'>Mobile:</span>
+              <span class='value'><a href='tel:647-323-7275'>647-323-7275</a></span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div id="awwwards" class="honorable black right">
+    <a href="http://www.awwwards.com" target="_blank">Awwwards</a>
+  </div>
+  <script>
+    var menuIsVisible = false;
+    function toggleMenu() {
+      menuIsVisible = !menuIsVisible;
+      document.getElementById("nav").className = menuIsVisible ? "global-nav is-open" : "global-nav";
+      console.log(menuIsVisible);
+    }
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36920239-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

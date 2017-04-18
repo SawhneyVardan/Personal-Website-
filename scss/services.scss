@@ -1,0 +1,41 @@
+.card {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  background: white;
+  display: flex;
+  border-radius: 3px;
+  margin-bottom: .5rem;
+
+  .card-icon {
+    flex: 0 0 80px;
+    text-align: center;
+    background: black;
+    color: white;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    transition: all .2s ease;
+
+    .material-icons {
+      flex: 1;
+    }
+  }
+
+  .card-content {
+    flex: 1;
+
+    h3 {
+      margin: .5rem 0;
+      padding: .5rem;
+      font-weight: 400;
+    }
+  }
+
+  &:hover {
+    .card-icon {
+      flex: 0 0 120px;
+    }
+  }
+}
